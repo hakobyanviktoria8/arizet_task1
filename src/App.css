@@ -1,1 +1,59 @@
+.app {
+  background: linear-gradient(
+    180deg,
+    rgba(62, 53, 47, 0) 0%,
+    rgba(62, 53, 47, 0.08) 100%
+  );
+  width: 100%;
+  min-height: 100vh;
+  padding: 50px 100px 50px 150px;
+}
+
+.app__navBar {
+  height: 80px;
+  text-align: right;
+}
+
+.app__navBar > img {
+  width: 187.87px;
+  height: 80px;
+  border: 1px solid;
+}
+
+.app__main {
+  border: 1px solid;
+  display: flex;
+}
+
+.app__main_formWrapper {
+  border: 1px solid green;
+  display: flex;
+  align-items: center;
+}
+
+.app__main_form {
+  background: #fef6f0;
+  box-shadow: 0px 0px 30px rgba(91, 105, 152, 0.2);
+  border-radius: 16px;
+  width: 612px;
+  height: 582px;
+  padding: 50px 46px 30px;
+}
+
+.app__main_form > h2 {
+  font-weight: 800;
+  font-size: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #3e352f;
+  margin-bottom: 30px;
+  line-height: 40px;
+}
+
+/* left image part */
+.app__main_imgWrapper {
+  width: 45%;
+  border: 1px solid red;
+  min-height: 90vh;
+}
 
