@@ -12,11 +12,16 @@ export const SelectLocation = () => {
   return (
     <div>
       <label htmlFor="location">My location:</label>
-      <Select
-        options={options}
-        value={value}
-        onChange={changeHandler}
-      />
+      <div className="countrySelectWrapper">
+        <Select
+          options={options}
+          value={value}
+          onChange={changeHandler}
+          className="countrySelect"
+        />
+        <p> E.g. New Roads or 70760</p>
+        <p> We don't use postal addresses to contact members directly!</p>
+      </div>
     </div>
   );
 };
