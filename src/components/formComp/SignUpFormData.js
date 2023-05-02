@@ -43,7 +43,7 @@ export const SignUpFormData = () => {
       localStorage.setItem("userData", JSON.stringify(resData));
       navigate("/profile");
     }
-  }, [resData]);
+  }, [resData, navigate]);
 
   return (
     <div className="app__main_form">
@@ -61,7 +61,7 @@ export const SignUpFormData = () => {
           placeholder="your email address"
           type="text"
           handleChange={handleChange}
-          errorMess={resData["Error"]?.message}
+          errorMess={resData.Error?.message}
         />
 
         <Input
@@ -75,11 +75,9 @@ export const SignUpFormData = () => {
         <div className="btnWrapper">
           <button
             type="submit"
-            disabled={userData.email === "" && userData.password === ""}
+            disabled={!userData.email || !userData.password}
             className={`${
-              userData.email === "" && userData.password === ""
-                ? "disabled"
-                : ""
+              !userData.email || !userData.password ? "disabled" : ""
             } `}
           >
             start!
