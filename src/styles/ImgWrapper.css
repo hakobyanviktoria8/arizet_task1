@@ -1,0 +1,30 @@
+.app__main_imgWrapper {
+  width: 45%;
+  min-height: 90vh;
+  position: relative;
+}
+
+.app__main_imgWrapper > .man {
+  position: absolute;
+  width: 296.42px;
+  height: 344.48px;
+  left: 80px;
+  top: 0px;
+}
+
+.app__main_imgWrapper > .woman {
+  position: absolute;
+  width: 264.82px;
+  height: 315.77px;
+  left: 330px;
+  top: 90px;
+  transform: rotate(-1.19deg);
+}
+
+.app__main_imgWrapper > .couple {
+  position: absolute;
+  width: 441.63px;
+  height: 400.67px;
+  left: 120px;
+  top: 400px;
+}

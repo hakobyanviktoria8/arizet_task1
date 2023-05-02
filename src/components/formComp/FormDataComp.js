@@ -1,6 +1,9 @@
 import React from "react";
 import { SelectLookingFor } from "./SelectLookingFor";
 import { SelectAge } from "./SelectAge";
+import { SelectLocation } from "./SelectLocation";
+import { Input } from "./Input";
+import "./../../styles/FormDataComp.css";
 
 export const FormDataComp = () => {
   const handleSubmit = (e) => {
@@ -19,8 +22,27 @@ export const FormDataComp = () => {
 
         <SelectAge />
 
-        <button type="submit">Submit</button>
+        <SelectLocation />
+
+        <Input
+          fildName="email"
+          labelName="My email:"
+          placeholder="your email address"
+        />
+
+        <Input
+          fildName="password"
+          labelName="My password:"
+          placeholder="create your password"
+        />
+
+        <button type="submit">start!</button>
       </form>
+
+      <div>
+        <span>Already signed up?</span>
+        <a href="">Log in</a>
+      </div>
     </div>
   );
 };

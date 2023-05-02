@@ -9,6 +9,14 @@ export const SelectLocation = () => {
   const changeHandler = (value) => {
     setValue(value);
   };
-
-  return <Select options={options} value={value} onChange={changeHandler} />;
+  return (
+    <div>
+      <label htmlFor="location">My location:</label>
+      <Select
+        options={options}
+        value={value}
+        onChange={changeHandler}
+      />
+    </div>
+  );
 };

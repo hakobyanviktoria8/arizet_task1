@@ -1,0 +1,26 @@
+.footerWrapper {
+  height: 50px;
+  margin-top: 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid;
+  width: 50%;
+  align-items: center;
+}
+
+.footerWrapper > div > a,
+.footerWrapper > span {
+  color: #3e352f;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  text-decoration-line: underline;
+  margin: 0 20px;
+}
+
+.footerWrapper > span {
+  text-decoration: none;
+  margin-top: 10px;
+}

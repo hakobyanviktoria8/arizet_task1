@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import "./../styles/SelectAge.css";
-import { generateAge } from "../helper/generateAge";
+import { generateAge } from "../../helper/generateAge";
 
 export const SelectAge = () => {
   const [selectedValue, setSelectedValue] = useState("");

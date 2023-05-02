@@ -1,0 +1,18 @@
+.app__main_form {
+  background: #fef6f0;
+  box-shadow: 0px 0px 30px rgba(91, 105, 152, 0.2);
+  border-radius: 16px;
+  width: 612px;
+  height: 582px;
+  padding: 50px 46px 30px;
+}
+
+.app__main_form > h2 {
+  font-weight: 800;
+  font-size: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #3e352f;
+  margin-bottom: 30px;
+  line-height: 40px;
+}

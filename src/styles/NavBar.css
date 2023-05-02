@@ -1,0 +1,9 @@
+.app__navBar {
+  height: 80px;
+  text-align: right;
+}
+
+.app__navBar > img {
+  width: 187.87px;
+  height: 80px;
+}
