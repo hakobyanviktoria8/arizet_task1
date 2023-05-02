@@ -1,0 +1,21 @@
+.profile {
+  display: flex;
+  justify-content: space-around;
+}
+
+.profile > img {
+  transform: rotate(15deg);
+  width: 300px;
+}
+
+.profile > div > h2 {
+  font-weight: 800;
+  font-size: 30px;
+  line-height: 41px;
+  color: #3e352f;
+  margin-bottom: 30px;
+}
+
+.profile > div > p {
+  margin-bottom: 10px;
+}

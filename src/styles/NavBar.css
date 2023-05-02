@@ -3,7 +3,7 @@
   text-align: right;
 }
 
-.app__navBar > img {
+.app__navBar > a > img {
   width: 187.87px;
   height: 80px;
 }

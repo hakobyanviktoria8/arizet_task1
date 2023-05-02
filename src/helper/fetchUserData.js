@@ -11,10 +11,7 @@ export const fetchUserData = (email, password, setResData) => {
 
   fetch("https://iconnect247.net/api/v2/sessions", requestOptions)
     .then((response) => response.json())
-    .then((data) => {
-      setResData(data);
-      console.log("Success", data);
-    })
+    .then((data) => setResData(data))
     .catch((error) => {
       console.error("There was an error!", error);
     });

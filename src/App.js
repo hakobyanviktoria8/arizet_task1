@@ -1,24 +1,16 @@
-import "./App.css";
-import { FormDataComp } from "./components/formComp/FormDataComp";
-import { Footer } from "./components/Footer";
-import { ImgWrapper } from "./components/ImgWrapper";
-import { NavBar } from "./components/NavBar";
+import { Route, Routes } from "react-router";
+import "./styles/App.css";
+import { Home } from "./pages/Home";
+import { Login } from "./pages/Login";
+import { Profile } from "./pages/Profile";
 
 function App() {
   return (
-    <div className="app">
-      <NavBar />
-
-      <div className="app__main">
-        <div className="app__main_formWrapper">
-          <FormDataComp />
-        </div>
-
-        <ImgWrapper />
-      </div>
-
-      <Footer />
-    </div>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/profile" element={<Profile />} />
+    </Routes>
   );
 }
 

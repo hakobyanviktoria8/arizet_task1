@@ -1,12 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { SelectLookingFor } from "./SelectLookingFor";
 import { SelectAge } from "./SelectAge";
 import { SelectLocation } from "./SelectLocation";
 import { Input } from "./Input";
-import "./../../styles/FormDataComp.css";
+import "./../../styles/SignUpFormData.css";
 import { fetchUserData } from "../../helper/fetchUserData";
+import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-export const FormDataComp = () => {
+export const SignUpFormData = () => {
   const [userData, setUserData] = useState({
     looking_for: "",
     age: "",
@@ -15,6 +17,7 @@ export const FormDataComp = () => {
     password: "",
   });
   const [resData, setResData] = useState({});
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -35,7 +38,12 @@ export const FormDataComp = () => {
     fetchUserData(formJson.email, formJson.password, setResData);
   };
 
-  console.log(111111, resData);
+  useEffect(() => {
+    if (resData["Status"] === "ok" && resData["Data"]?.access_token) {
+      localStorage.setItem("userData", JSON.stringify(resData));
+      navigate("/profile");
+    }
+  }, [resData]);
 
   return (
     <div className="app__main_form">
@@ -81,7 +89,7 @@ export const FormDataComp = () => {
 
       <div className="loginWrapper">
         <span>Already signed up?</span>
-        <a href="/">Log in</a>
+        <Link to="/login">Log in</Link>
       </div>
     </div>
   );
