@@ -30,14 +30,30 @@
   margin-right: 20px;
 }
 
-.app__main_form > form > div > select,
+.app__main_form > form > .formSelect_looking_for > div,
+.app__main_form > form > .formSelect_age > div,
 .app__main_form > form > div > .countrySelectWrapper,
 .app__main_form > form > div > .inputWrapper > input {
   width: 380px;
   height: 46px;
   border: 2px solid #f6a95f;
   border-radius: 12px;
-  padding: 12px 20px;
+  padding: 0 12px;
+  background: white;
+}
+
+.app__main_form > form > .formSelect_looking_for > div > select,
+.app__main_form > form > .formSelect_age > div > select {
+  width: 100%;
+  height: 42px;
+  border: none;
+  outline: none;
+}
+
+.app__main_form > form > .formSelect_looking_for > div > select:focus-visible,
+.app__main_form > form > .formSelect_age > div > select:focus-visible {
+  border: none;
+  outline: none;
 }
 
 .app__main_form > form > div > .inputWrapper {
@@ -67,10 +83,16 @@
   width: 100%;
   border: none;
   border-radius: 12px;
+  height: 42px;
 }
 
-.app__main_form > form > div > .countrySelectWrapper > div > div:focus {
-  border: none;
+.app__main_form
+  > form
+  > div
+  > .countrySelectWrapper
+  > div
+  > #react-select-3-listbox {
+  height: 300px;
 }
 
 .app__main_form > form > div > .countrySelectWrapper > p {

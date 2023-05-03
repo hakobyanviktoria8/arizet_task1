@@ -9,22 +9,24 @@ export const SelectAge = () => {
     <>
       <div className="formSelect_age">
         <label htmlFor="age">My age:</label>
-        <select
-          id="age"
-          name="age"
-          defaultValue={selectedValue}
-          onChange={(e) => setSelectedValue(e.target.value)}
-          data-placeholder="Выбрать год"
-        >
-          <option value="" disabled hidden>
-            select your age
-          </option>
-          {agesArr?.map((age) => (
-            <option key={age} value={`${age}`}>
-              {age}
+        <div>
+          <select
+            id="age"
+            name="age"
+            defaultValue={selectedValue}
+            onChange={(e) => setSelectedValue(e.target.value)}
+            data-placeholder="Выбрать год"
+          >
+            <option value="" disabled hidden>
+              select your age
             </option>
-          ))}
-        </select>
+            {agesArr?.map((age) => (
+              <option key={age} value={`${age}`}>
+                {age}
+              </option>
+            ))}
+          </select>
+        </div>
       </div>
     </>
   );

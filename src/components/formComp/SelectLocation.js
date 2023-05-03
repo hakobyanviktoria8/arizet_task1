@@ -9,11 +9,13 @@ export const SelectLocation = () => {
   const changeHandler = (value) => {
     setValue(value);
   };
+
   return (
     <div>
       <label htmlFor="location">My location:</label>
       <div className="countrySelectWrapper">
         <Select
+          isSearchable={true}
           options={options}
           value={value}
           onChange={changeHandler}
