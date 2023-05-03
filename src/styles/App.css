@@ -7,3 +7,15 @@
   display: flex;
   align-items: center;
 }
+
+@media screen and (max-width: 1024px) {
+  .app__main {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .app__main_formWrapper {
+    justify-content: center;
+    margin-top: 30px;
+  }
+}

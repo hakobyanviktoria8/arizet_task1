@@ -28,3 +28,9 @@
   left: 120px;
   top: 400px;
 }
+
+@media screen and (max-width: 1024px) {
+  .app__main_imgWrapper {
+    width: 100%;
+  }
+}

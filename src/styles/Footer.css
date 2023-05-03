@@ -23,3 +23,10 @@
   text-decoration: none;
   margin-top: 10px;
 }
+
+@media screen and (max-width: 1024px) {
+  .footerWrapper {
+    margin-top: 300px;
+    width: 100%;
+  }
+}
